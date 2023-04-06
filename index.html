@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="./style.css" rel="stylesheet" />
-    <script src="./service-worker.js"></script>
+    <link href="./menifest.json" rel="menifest" />
   </head>
   <body>
     <div class="bar-header">
@@ -78,5 +78,18 @@
       </p>
     </div>
     <div class="bar-footer">나는 푸터다</div>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("service-worker.js") // serviceWorker 파일 경로
+            .then((reg) => {
+              console.log("Service worker registered.", reg);
+            })
+            .catch((e) => console.log(e));
+        });
+      }
+    </script>
   </body>
 </html>
