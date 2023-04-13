@@ -1,95 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link href="./style.css" rel="stylesheet" />
-    <link rel="manifest" href="./manifest.json" />
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 앱</title>
+    <link rel="manifest" href="./manifest.json">
+    <script src="./service-worker.js"></script>
+    <link rel="stylesheet" href="https://supsok.github.io/gbsw/touchstrap/css/touchstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://supsok.github.io/gbsw/touchstrap/js/touchstrap.js"></script>
   </head>
-  <body>
-    <div class="bar-header">
-      <h2>나는 헤더다</h2>
-    </div>
+<body>
+  <section class="page center" id="page01">
+    <header class="bar bar-nav bar-light bg-faded">
+      <h1 class="title">첫번째페이지</h1>
+    </header>
+    <main class="content">
+      <div class="content-padded">
+        <button type="button" class="btn btn-primary" data-toggle="page" data-start="#page01" data-target="#page02">페이지 호출</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+          Launch modal
+        </button>
+      </div>
+    </main>
+  </section>
+
+  <section class="page right" id="page02">
+    <header class="bar bar-nav bar-light bg-faded">
+      <h1 class="title">두번째페이지</h1>
+    </header>
+    <main class="content">
+      <div class="content-padded">
+        안녕하세요
+      </div>
+    </main>
+  </section>
+
+
+    <!-- Modal -->
+  <div id="myModal" class="modal">
+    <header class="bar bar-nav bar-light bg-faded">
+      <a class="icon icon-close pull-right" data-dismiss="modal" role="button"></a>
+      <h1 class="title">Modal</h1>
+    </header>
     <div class="content">
-      <p>
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다
-        나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
-        더미다나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
-        더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
-        더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
-        더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
-        더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
-        더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
-        더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
-        더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
-        더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
-        더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
-        더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
-        더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
-        더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
-        더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
-        더미다 나는 더미다 나는 더미다나는 더미다 나는 더미다 나는 더미다 나는
-        더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
-        더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
-        더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는 더미다 나는
+      <p class="content-padded">
+        The contents of my modal go here.
       </p>
     </div>
-    <div class="bar-footer">나는 푸터다</div>
+  </div>
 
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("service-worker.js") // serviceWorker 파일 경로
-            .then((reg) => {
-              console.log("Service worker registered.", reg);
-            })
-            .catch((e) => console.log(e));
-        });
-      }
-    </script>
-  </body>
+      <script>
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", () => {
+            navigator.serviceWorker
+              .register("service-worker.js") // serviceWorker 파일 경로
+              .then((reg) => {
+                console.log("Service worker registered.", reg);
+              })
+              .catch((e) => console.log(e));
+          });
+        }
+      </script>
+    </body>
+  </head>
 </html>
